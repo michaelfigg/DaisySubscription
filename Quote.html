@@ -112,7 +112,7 @@
         font-weight: 300;
     }
     .spacing {
-        padding: 0% 2%;
+        padding: 0% 5%;
     }
     .fullWidthStrap {
         padding: 1em;
@@ -128,19 +128,20 @@
     ul.nav.nav-tabs a {
         background: none;
         border: none;
+        padding: 0;
+        margin-right: 30px;
     }
     .fullWidthStrap {
         padding: 1em;
         margin: 2em 0em;
         background: #f39100;
         position: relative;
+        padding: 20px 0px;
     }
     .fullWidthStrap .text-right {
         display: block;
-        margin-right: 10px;
         color: #ffb951;
         font-size: 20px;
-        line-height: 45px;
     }
     ul.nav.nav-tabs a {
         background: none !important;
@@ -254,6 +255,41 @@
         right: 0;
         opacity: 1;
     }
+    .subscriptionItems {
+        float: right;
+        margin-top: 55px;
+        line-height: 40px;
+    }
+    .subscriptionItems .noInQuote span {
+        background: #f39100;
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: block;
+        line-height: 20px;
+        float: right;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .subscriptionItems .noInQuote i {
+        position: relative;
+        top: 2px;
+        font-size: 40px;
+        color: #4c4c4c;
+    }
+    .subscriptionItems .noInQuote {
+        float: right;
+        position: relative;
+        margin-left: 10px;
+    }
+    .subscriptionItems .noInQuote {
+        float: right;
+        position: relative;
+        margin-left: 10px;
+    }
 </style>
 
 </head>
@@ -263,15 +299,24 @@
     <div class="subscriptionHeaderTop spacing">
         <img id="logo" src="./Quote_files/Daisy-Wholesale-logo.png" alt="Magento Commerce" width="97" height="154">
         <span class="slogan">Subscription Portal</span>
+        <div class="subscriptionItems">
+            Items in Quote: 
+            <div class="noInQuote">
+                <i class="material-icons">shopping_cart</i>
+                <span>1</span>
+            </div>
+        </div>
     </div>
     <div class="fullWidthStrap">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="https://quotes.example.com/Subscription/Details/Quote/5MZAdlQBMkOULL-KcEaG_A">Quote</a></li>
-            <li><a href="https://quotes.example.com/Subscription/Details/Subscription/5MZAdlQBMkOULL-KcEaG_A">Subscription</a></li>
-        </ul>
-        <div id="textHeaderRight">
-            <div class="text-right">
-                First Account Create
+        <div class="spacing">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="https://quotes.example.com/Subscription/Details/Quote/5MZAdlQBMkOULL-KcEaG_A">Quote</a></li>
+                <li><a href="https://quotes.example.com/Subscription/Details/Subscription/5MZAdlQBMkOULL-KcEaG_A">Subscription</a></li>
+            </ul>
+            <div id="textHeaderRight">
+                <div class="text-right">
+                    First Account Create
+                </div>
             </div>
         </div>
     </div>
