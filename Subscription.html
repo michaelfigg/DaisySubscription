@@ -6,221 +6,466 @@
     <link rel="stylesheet" href="./Subscription_files/bootstrap.min.css">
     <script src="./Subscription_files/jquery.min.js.download"></script>
     <script src="./Subscription_files/bootstrap.min.js.download"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
         body {
-            font-family: "Open sans", sans-serif;
-            font-size: 13px;
+        font-family: 'Muli', sans-serif;
+        font-size: 13px;
         }
-
+        #logo {
+            margin-left: 10px;
+        }
         .slogan {
             margin-left: 20px;
             font-size: 19px;
             color: #022f63;
         }
-
+        .center {
+            text-align: center;
+        }
+        .floatCol {
+            float: left;
+        }
+        #textHeaderRight {
+            float: right;
+            margin-right: 10px;
+        }
         #subscriptionTabs {
             border: none;
             margin-bottom: 2em;
         }
-
-            #subscriptionTabs a {
-                border: none;
-                color: #000;
-            }
-
-            #subscriptionTabs li {
-                margin: auto;
-                background: #f1f1f1;
-                width: 25%;
-                text-align: center;
-            }
-
-                #subscriptionTabs li.active {
-                    background: #f39200;
-                }
-
-                    #subscriptionTabs li.active a {
-                        background: none;
-                        color: #fff;
-                    }
-
-                    #subscriptionTabs li.active:after {
-                        content: " ";
-                        position: absolute;
-                        right: -15px;
-                        top: 0px;
-                        border-top: 20px solid transparent;
-                        border-right: none;
-                        border-left: 15px solid #f39200;
-                        border-bottom: 19px solid transparent;
-                        z-index: 2;
-                    }
-
-                #subscriptionTabs li::after {
-                    content: " ";
-                    position: absolute;
-                    right: -15px;
-                    top: 0px;
-                    border-top: 20px solid #a5a5a500;
-                    border-right: none;
-                    border-left: 15px solid #ffffff;
-                    border-bottom: 19px solid #ce737300;
-                    z-index: 2;
-                }
-
-        .subscriptionHeader {
-            width: 100%;
+        #subscriptionTabs a {
+            border: none;
+            color: #000;
         }
-
-            .subscriptionHeader td {
-                font-size: 14px;
-                line-height: 20px;
-            }
-
+        #subscriptionTabs li {
+            margin: auto;
+            background: #f1f1f1;
+            width: 25%;
+            text-align: center;
+        }
+        #subscriptionTabs li.active {
+            background: #f39200;
+        }
+        #subscriptionTabs li.active a {
+            background: none;
+            color: #fff;
+        }
+        #subscriptionTabs li.active:after {
+            content: " ";
+            position: absolute;
+            right: -15px;
+            top: 0px;
+            border-top: 20px solid transparent;
+            border-right: none;
+            border-left: 15px solid #f39200;
+            border-bottom: 19px solid transparent;
+            z-index: 2;
+        }
+        #subscriptionTabs li::after {
+            content: " ";
+            position: absolute;
+            right: -15px;
+            top: 0px;
+            border-top: 20px solid #a5a5a500;
+            border-right: none;
+            border-left: 15px solid #ffffff;
+            border-bottom: 19px solid #ce737300;
+            z-index: 2;
+        }
+        .subscriptionHeader {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .subscriptionHeaderInformation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .subscriptionHeaderInformation {
+            text-align: left;
+        }
+        .subscriptionHeaderInformation .col2 {
+            float: left;
+        }
+        .subscriptionHeader td {
+            font-size: 14px;
+            line-height: 20px;
+        }
         .fundingDetails {
             margin-bottom: 1em;
             color: #022f63;
             font-weight: 600;
         }
-
         .options {
             margin-bottom: 2em;
         }
-
-            .options ul select {
-                min-width: 100px;
-            }
-
-            .options ul {
-                list-style: none;
-                padding: 0;
-                line-height: 37px;
-            }
-
+        .options ul select {
+            min-width: 100px;
+        }
+        .options ul {
+            list-style: none;
+            padding: 0;
+            line-height: 37px;
+        }
         #Items td, #Items th {
             font-size: 14px;
         }
-
         #Items th {
             background: #f1f1f1;
         }
-
         .tableTotal td {
             font-weight: 700;
         }
+        .colContainter ul li {
+            line-height: 25px;
+        }
+        .colContainter label {
+            display: block;
+            font-weight: 300;
+        }
+        .spacing {
+            padding: 0% 5%;
+        }
+        .fullWidthStrap {
+            padding: 1em;
+            margin: 2em 0em;
+            background: #f39100;
+        }
+        ul.nav.nav-tabs {
+            border: none;
+            display: inline-block;
+            width: auto;
+            margin-left: 10px;
+        }
+        ul.nav.nav-tabs a {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-right: 30px;
+        }
+        .fullWidthStrap {
+            padding: 1em;
+            margin: 2em 0em;
+            background: #f39100;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .fullWidthStrap .text-right {
+            display: block;
+            color: #ffb951;
+            font-size: 20px;
+        }
+        ul.nav.nav-tabs a {
+            background: none !important;
+            border: none !important;
+            color: #ddd;
+            font-size: 20px;
+        }
+        ul.nav.nav-tabs li.active a {
+            color: #fff;
+        }
+        .col1 {
+            width: 100%;
+        }
+        .col2 {
+            width: 50%;
+        }
+        .col3 {
+            width: 33.33%;
+        }
+        .col4 {
+            width: 25%;
+        }
+        .colContainter input, .colContainter select {
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            height: 35px;
+        }
+        .option {
+            float: left;
+        }
+        .colContainter {
+            padding: 5px 10px;
+        }
+        .clear-both-invisible {
+            clear: both;
+            border: none;
+            margin: 0;
+        }
+        .containerSubscription h2 {
+            margin: 2% 10px;
+            font-size: 35px;
+            font-weight: 300;
+        }
+        #Items {
+            width: 99%;
+            margin: auto;
+        }
+        #Items tr {
+            background: none;
+        }
+        #Items th, #Items td {
+            background: none;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            vertical-align: middle;
+        }
+        .tableTotal td:first-child {
+            text-align: right;
+        }
+        .actionButtons {
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+        .actionButtons a {
+            padding: 10px 30px;
+        }
+        .actionButtons i {
+            position: relative;
+            top: 6px;
+            margin-right: 10px;
+            text-shadow: -1px -1px 0 #1b82fc, 1px -1px 0 #1b82fc, -1px 1px 0 #1b82fc, 1px 1px 0 #1b82fc;
+            color: #fff;
+        }
+        .actions {
+            text-align: center;
+            margin-bottom: 3%;
+        }
+        input[type="number"] {
+            padding: 5px 10px;
+        }
+        .actions button {
+            display: inline-block;
+            background: #f39100;
+            border: none;
+            color: #fff;
+            padding: 10px 30px;
+        }
+        button.modernButton {
+            position: relative;
+        }
+        button.modernButton:before {
+            -webkit-transition: .5s all ease;
+            transition: .5s all ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: '';
+            background-color: rgba(0,0,0,0.1);
+            z-index: 1;
+            background-blend-mode: multiply;
+        }
+        button.modernButton:hover:before {
+            -webkit-transition: .5s all ease;
+            transition: .5s all ease;
+            left: 0;
+            right: 0;
+            opacity: 1;
+        }
+        .subscriptionItems {
+            float: right;
+            margin-top: 55px;
+            line-height: 40px;
+        }
+        .subscriptionItems .noInQuote span {
+            background: #f39100;
+            border-radius: 50px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            display: block;
+            line-height: 20px;
+            float: right;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .subscriptionItems .noInQuote i {
+            position: relative;
+            top: 2px;
+            font-size: 40px;
+            color: #4c4c4c;
+        }
+        .subscriptionItems .noInQuote {
+            float: right;
+            position: relative;
+            margin-left: 10px;
+        }
+        .subscriptionItems .noInQuote {
+            float: right;
+            position: relative;
+            margin-left: 10px;
+        }
+        .processState {
+            height: 20px;
+            width: 20px;
+            background: #ddd;
+            border-radius: 50px;
+        }
+        .red {
+            background: #ff5151;
+        }
+        .yellow {
+            background: #f7f148;
+        }
+        .green {
+            background: #7af990;
+        }
     </style>
-
 </head>
-
-<body><div class="container">
-    <div class="subscriptionHeader">
-        <img id="logo" src="./Subscription_files/Daisy-Wholesale-logo.png" alt="Magento Commerce" width="97" height="154">
-        <span class="slogan">Subscription Portal</span>
-        <div class="text-right">
-            First Account Create
+    <body>
+        <div class="containerSubscription">
+            <div class="subscriptionHeaderTop spacing">
+                <img id="logo" src="./Quote_files/Daisy-Wholesale-logo.png" alt="Magento Commerce" width="97" height="154">
+                <span class="slogan">Subscription Portal</span>
+                <div class="subscriptionItems">
+                    Items in Quote: 
+                    <div class="noInQuote">
+                        <i class="material-icons">shopping_cart</i>
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fullWidthStrap">
+                <div class="spacing">
+                    <ul class="nav nav-tabs">
+                        <li><a href="https://quotes.example.com/Subscription/Details/Quote/5MZAdlQBMkOULL-KcEaG_A">Quote</a></li>
+                        <li class="active"><a href="https://quotes.example.com/Subscription/Details/Subscription/5MZAdlQBMkOULL-KcEaG_A">Subscription</a></li>
+                    </ul>
+                    <div id="textHeaderRight">
+                        <div class="text-right">
+                            First Account Create
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacing">
+                <div class="subscriptionHeaderInformation">
+                    <div class="col2">
+                        <h2>TradingAddress</h2>
+                        <div class="colContainter">
+                            <ul>
+                                <li>1-6 Yarmouth Place</li>
+                                <li>Mayfair 2</li>
+                                <li>London</li>
+                                <li>United Kingdom</li>
+                                <li>W1J 7BU</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <h2>Company Information</h2>
+                        <div class="colContainter">
+                            <ul>
+                                <li><b>Company Name: </b>First Account Create</li>
+                                <li><b>Company Account No: </b>123456789</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="clear-both-invisible">
+                </div>
+                <br>
+                    <h2>Subscription Progress</h2>
+                    <table id="Items" class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th>State Color</th>
+                                <th>Stage</th>
+                                <th>Next Action</th>
+                                <th>Date</th>
+                            </tr>
+                            <tr>
+                                <td><div class="processState yellow"></div></td>
+                                <td>Quatation Expiring...</td>
+                                <td>Follow up with customer</td>
+                                <td>25/03/2019</td>
+                            </tr>
+                            <tr>
+                                <td><div class="processState red"></div></td>
+                                <td>Subscription Approved</td>
+                                <td>Send agreement to customer</td>
+                                <td>01/03/2019</td>
+                            </tr>
+                            <tr>
+                                <td><div class="processState green"></div></td>
+                                <td>Sign Agreement and add Bank Details</td>
+                                <td>Send completed agreement to funder</td>
+                                <td>28/02/2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>Subscription Details</h2>
+                    <div class="subscriptionHeader">
+                            <div class="col4 option">
+                                    <div class="colContainter">
+                                        <span><b>Total Payable: </b></span>1273.0500
+                                    </div>
+                                </div>
+                            <div class="col4 option">
+                                <div class="colContainter">
+                                    <span><b>Per Month: </b></span>0
+                                </div>
+                            </div>
+                            <div class="col4 option">
+                                <div class="colContainter">
+                                    <span><b>Per Week: </b></span>0
+                                </div>
+                            </div>
+                            <div class="col4 option">
+                                <div class="colContainter">
+                                    <span><b>Per Day: </b></span>0
+                                </div>
+                            </div>
+                            <hr class="clear-both-invisible">
+                        </div>
+                        <div class="subscriptionDetails">
+                            <div class="col1 floatCol">
+                                <div class="colContainter">
+                                    <b>Agreement Ref:</b> xxxxx
+                                </div>
+                            </div>
+                            <div class="col1 floatCol">
+                                <div class="colContainter">
+                                    <b>Subscription Period:</b> 36 Months
+                                </div>
+                            </div>
+                            <div class="col1 floatCol">
+                                <div class="colContainter">
+                                    <b>Subscription End Date:</b>  yyyy/MM/dd
+                                </div>
+                            </div>
+                            <hr class="clear-both-invisible">
+                        </div>
+                    <h2>Subscription Assets</h2>
+                    <table id="Items" class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Status</th>
+                                <th>Serial Number</th>
+                                <th>Installation Date</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="actionButtons">
+                        <a href="#"><i class="material-icons">cloud_download</i>Download Agreement</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <br>
-    <ul class="nav nav-tabs">
-        <li><a href="https://quotes.example.com/Subscription/Details/Index/5MZAdlQBMkOULL-KcEaG_A">Quote</a></li>
-        <li class="active"><a href="https://quotes.example.com/Subscription/Details/Subscription/5MZAdlQBMkOULL-KcEaG_A">Subscription</a></li>
-    </ul>
-    <table class="subscriptionHeader">
-        <tbody><tr>
-            <td></td>
-            <td><span><b>TradingAddress: </b></span>1-6 Yarmouth Place </td>
-            
-        </tr>
-        <tr>
-            <td></td>
-            <td>Mayfair 2</td>
-            
-        </tr>
-        <tr>
-            <td><span><b>Company Name: </b></span>First Account Create</td>
-            <td>London</td>
-     
-        </tr>
-        <tr>
-            <td><span><b>Company Account No: </b></span></td>
-
-            <td>United Kingdom</td>
-          
-        </tr>
-        <tr>
-            <td><span><b></b></span></td>
-            <td>W1J 7BU</td>
-           
-        </tr>
-    </tbody></table>
-    <br>
-    <div class="text-right">
-        <button>Download Agreement</button>
-    </div>
-    <div>
-        <h3>Subscription Progress</h3>
-        <table id="Items" class="table table-striped">
-            <tbody><tr>
-                <th>State Color</th>
-                <th>Stage</th>
-                <th>Next Action</th>
-                <th>Date</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Quatation Expiring...</td>
-                <td>Follow up with customer</td>
-                <td>25/03/2019</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Subscription Approved</td>
-                <td>Send agreement to customer</td>
-                <td>01/03/2019</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Sign Agreement and add Bank Details</td>
-                <td>Send completed agreement to funder</td>
-                <td>28/02/2019</td>
-            </tr>
-        </tbody></table>
-
-        <h3>Subscription Details</h3>
-        <div class="options">
-            <ul>
-                <li>
-                    Agreement Ref: xxxxx
-                </li>
-                <li>
-                    Subscription Period: 36 Months
-                </li>
-                <li>
-                    Subscription End Date:  yyyy/MM/dd
-                </li>
-                <li>
-                    Total Payable: 1273.0500
-                </li><li>
-                </li><li>Per Month: 0</li>
-                <li>Per Week: 0</li>
-                <li>Per Day: 0</li>
-            </ul>
-        </div>
-        <h3>Subscription Assets</h3>
-        <table id="Items" class="table table-striped">
-            <tbody><tr>
-                <th>Status</th>
-                <th>Serial Number</th>
-                <th>Installation Date</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody></table>
-    </div>
-</div>
-
-</body></html>
+    </body>
+</html>
